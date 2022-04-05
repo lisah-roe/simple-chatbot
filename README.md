@@ -7,3 +7,11 @@ The output function is simple, and is used for both echoing the users message an
 There is a response function that can be altered by participants for fun, or simple and fun alterations can be made by adding to the responses array.
 
 CSS could also be altered.
+
+
+Can be run in codepen, or use the standalone versions.
+
+
+
+Simplified from this nice example:
+https://codepen.io/tariq01/pen/yLVMJrr
