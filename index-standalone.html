@@ -1,35 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Chatbot</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./script-standalone.js"></script>
-    <script>
-    $(function() {
-      const inputField = document.getElementById("input");
-      inputField.addEventListener("keydown", (e) => {
-  if (e.code === "Enter") {
-    let input = inputField.value.trim();
-    inputField.value = "";
-    // Output the users' message
-    output(input, "user-messages");
-    // get response
-    let bot = response(input);
-    setTimeout(function () {
-      // Output response, with a little pause
-      output(bot, "bot-messages");
-    }, 1500);
-  }
-});
-    });
-    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="./script-standalone.js"></script>
 </head>
-
 <body>
   <div id="container" class="container">
     <div id="chat" class="chat">
@@ -39,6 +16,24 @@
       <input id="input" type="text" placeholder="Write something..." autocomplete="off" autofocus="true" />
     </div>
   </div>
+  <script>
+    (function () {
+      const inputField = document.getElementById("input");
+      inputField.addEventListener("keydown", (e) => {
+        if (e.code === "Enter") {
+          let input = inputField.value.trim();
+          inputField.value = "";
+          // Output the users' message
+          output(input, "user-messages");
+          // get response
+          let bot = response(input);
+          setTimeout(function () {
+            // Output response, with a little pause
+            output(bot, "bot-messages");
+          }, 1500);
+        }
+      });
+    })();
+  </script>
 </body>
-
 </html>

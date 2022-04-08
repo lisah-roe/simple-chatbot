@@ -30,8 +30,8 @@ function response(input) {
 const replies = [
   "Yeah, me too",
   "Thats cool",
-  "Had you thought about other peoples feelings?",
-  "What about taking that one step further?"
+  "Copy that!",
+  "Super"
 ];
 
 // Possible greetings
